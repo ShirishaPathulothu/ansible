@@ -8,9 +8,9 @@
      ansible.builtin.debug:
        msg: "Iam learning {{Course}} and trainer is {{Trainer}}"
 
-- name: playbook-02
+- name: print the information again
   vars:
-   Cousre: Ansible
+   Cousre: "Ansible"
   ansible.builtin.debug:
      msg: "Iam learning {{Course}} and trainer is {{Trainer}}"
 
