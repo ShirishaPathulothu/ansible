@@ -4,7 +4,7 @@
   - name: Course
     prompt: Please enter the course name
   - name: Trainer
-    Prompt: Please enter trainer name  
+    prompt: Please enter trainer name  
   tasks:
   - name: print the course info
     ansible.builtin.debug:
