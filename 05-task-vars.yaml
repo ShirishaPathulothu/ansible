@@ -14,7 +14,7 @@
      ansible.builtin.debug:
        msg: "Iam learning {{Course}} and trainer is {{Trainer}}"
 
-    - name: playbook-03
-      ansible.builtin.debug:
-        msg: "Iam learning {{Course}} and trainer is {{Trainer}}"
+   - name: playbook-03
+     ansible.builtin.debug:
+       msg: "Iam learning {{Course}} and trainer is {{Trainer}}"
     
