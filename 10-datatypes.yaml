@@ -1,0 +1,20 @@
+- name: datatypes example
+  hosts: local
+  connection: local
+  vars: 
+    course: "Devops with AWS" #string
+    duration: 120 #number
+    topics: #list
+    - Linux
+    - shell
+    - Ansible
+    - AWS
+    live: true #boolean
+    tools: #map/dictionary
+      ci: jenkins
+      cm: ansible
+      cloud: aws
+  tasks:
+  - name: print the info
+    ansible.builtin.debug:
+      msg: "Hi, iam learning {{course}}, with duration: {{duration}}, topics are: {{topics}} and live: {{live}}, tools are: {{tools}}"
