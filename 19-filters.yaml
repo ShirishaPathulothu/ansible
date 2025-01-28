@@ -10,4 +10,22 @@
     vars:
       greeting: "HELLO Ramesh"
     ansible.builtin.debug:
-      msg: "{{greeting | lower}}"     
+      msg: "{{greeting | lower}}"
+
+  - name: convert to uppercase
+    vars:
+      greeting: "hello Ramesh"
+    ansible.builtin.debug:
+      msg: "{{greeting | upper}}" 
+
+  - name: get the unique numbers
+    vars:
+      numbers: 1,2,3,1,4,2,10,5,4,3
+    ansible.builtin.debug:
+      msg: "{{numbers | unique}}"    
+
+  - name: print min amd max numbers
+    vars:
+      numbers: 5,50,25,23,4,1,67
+    ansible.builtin.debug:
+      msg: "Min:{{numbers | min}}, Max:{{numbers | max}}"          
