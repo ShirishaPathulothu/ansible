@@ -9,7 +9,7 @@
     - mysql
     - backend
     - frontend 
-    zone: dev12.shop
+    zone: dev12.shop 
   tasks:
   - name: create ec2 instance
     amazon.aws.ec2_instance:
@@ -35,4 +35,5 @@
       value: "{{item.instancs[0].private_ip_address}}"
       wait: true
       overwrite: true
-    loop: "{{ec2_instances.results}}"              
+    loop: "{{ec2_instances.results}}"  
+              
