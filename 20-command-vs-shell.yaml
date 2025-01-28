@@ -2,5 +2,13 @@
   hosts: local
   connection: local
   tasks:
-  - name: execute the command
+  - name: execute the shell
     ansible.builtin.shell: ls -ltr > /tmp/output.txt
+
+  - name: execute the command
+    ansible.builtin.shell: ps -ef | grep ssh
+    register: output
+
+  - name: execute the command
+    ansible.builtin.command: ps -ef | grep ssh
+    register: output
